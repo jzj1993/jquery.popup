@@ -33,7 +33,7 @@ jQuery.popup插件是一款简单易用的网页弹窗插件，是在jQuery.lean
 	<link rel="stylesheet" type="text/css" href="jquery.popup.css">
   ```
 
-###2. 定义弹窗元素，并在其内部定义关闭弹窗的按钮，其锚点为#
+###2. 定义弹窗元素，并在其内部定义关闭弹窗的按钮，其锚点为`#`
 
  ```
 	<div id="wnd">
