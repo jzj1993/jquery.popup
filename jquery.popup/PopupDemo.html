@@ -10,8 +10,8 @@
 		</style>
 	</head>
 	<body>
-		<p><a id="a1" href="#wnd1">Window1: top 50px</a></p>
-		<p><a id="a2" href="#wnd1">Window2: center</a></p>
+		<p><a id="a1" href="#wnd1">Window1: top 50px, overlay:0.4</a></p>
+		<p><a id="a2" href="#wnd1">Window2: center, overlay:0.1</a></p>
 		<p><a id="a3" href="#wnd1">Window3: left 10px</a></p>
 		<p><a id="a4" href="#wnd1">Window4: right 10px, bottom 10%</a></p>
 		<div id="wnd1">
@@ -26,6 +26,7 @@
 				close:".close"
 			});
 			$("#a2").popup({
+				overlay:0.1,
 				focus:"#input",
 				close:".close"
 			});
