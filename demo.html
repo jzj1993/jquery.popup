@@ -1,0 +1,45 @@
+﻿<html>
+	<head>
+		<title>Popup Demo</title>
+		<link rel="stylesheet" type="text/css" href="jquery.popup.css">
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.popup.min.js"></script>
+		<style type="text/css">
+			#wnd1 {display:none;background:#7AB0DE;padding:50px}
+			p {text-align:center;padding:10px}
+		</style>
+	</head>
+	<body>
+		<p><a id="a1" href="#wnd1">Window1: top 50px</a></p>
+		<p><a id="a2" href="#wnd1">Window2: center</a></p>
+		<p><a id="a3" href="#wnd1">Window3: left 10px</a></p>
+		<p><a id="a4" href="#wnd1">Window4: right 10px, bottom 10%</a></p>
+		<div id="wnd1">
+			<p><a class="close" href="#">CloseWindow</a></p>
+			<p><input id="input"></p>
+		</div>
+		<script type="text/javascript">
+			$("#a1").popup({
+				top:"50px",
+				overlay:0.4,
+				focus:"#input",
+				close:".close"
+			});
+			$("#a2").popup({
+				focus:"#input",
+				close:".close"
+			});
+			$("#a3").popup({
+				left:"10px",
+				focus:"#input",
+				close:".close"
+			});
+			$("#a4").popup({
+				right:"10px",
+				bottom:"10%",
+				focus:"#input",
+				close:".close"
+			});
+		</script>
+	</body>
+</html>
