@@ -4,24 +4,49 @@
 		<link rel="stylesheet" type="text/css" href="jquery.popup.css">
 		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.popup.min.js"></script>
+		
 		<style type="text/css">
-			#wnd1 {display:none;background:#7AB0DE;padding:50px}
-			p {text-align:center;padding:10px}
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #75A5DB;
+				font-size: 20px;
+			}
+
+			a {	
+				color: #FFF;
+				display:  block;
+				padding: 20px;
+				margin: 20px;
+				text-decoration: none;
+				background-color: #3A75B8;
+				text-align:center;
+			}
+
+			#window {
+				display:none;
+				background:#7AB0DE;
+				padding:30px;
+				text-align:center;
+			}
 		</style>
 	</head>
 	<body>
-		<p><a id="a1" href="#wnd1">Window1: top 50px, overlay:0.4</a></p>
-		<p><a id="a2" href="#wnd1">Window2: center, overlay:0.1</a></p>
-		<p><a id="a3" href="#wnd1">Window3: left 10px</a></p>
-		<p><a id="a4" href="#wnd1">Window4: right 10px, bottom 10%</a></p>
-		<div id="wnd1">
-			<p><a class="close" href="#">CloseWindow</a></p>
-			<p><input id="input"></p>
+
+		<a id="a1" href="#window">Window 1<br/>( top: 50px, overlay: 0.5 )</a>
+		<a id="a2" href="#window">Window 2<br/>( overlay:0.1 )</a>
+		<a id="a3" href="#window">Window 3<br/>( left: 10px )</a>
+		<a id="a4" href="#window">Window 4<br/>( right: 10px, bottom: 10% )</a>
+		
+		<div id="window">
+			<a class="close" href="#">CloseWindow</a><br/>
+			<input id="input" type="text"/>
 		</div>
+
 		<script type="text/javascript">
 			$("#a1").popup({
 				top:"50px",
-				overlay:0.4,
+				overlay:0.5,
 				focus:"#input",
 				close:".close"
 			});
@@ -42,5 +67,6 @@
 				close:".close"
 			});
 		</script>
+
 	</body>
 </html>
