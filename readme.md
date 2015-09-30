@@ -41,51 +41,43 @@ jQuery.popup插件是一款简单易用的网页弹窗插件，是在jQuery.lean
 
 - overlay:覆盖层透明度（范围0~1，默认为0.1，数值越大颜色越深，背景越暗）
 
-##使用说明
+##使用简介
 
-###1. 在HTML页面中包含以下文件：
+###1. 在HTML中包含以下文件：
 
- - `jquery.min.js`：jquery支持库(经过压缩后的最小版本)
- - `jquery.popup.min.js`：本插件的源文件(经过压缩后的最小版本)
- - `jquery.popup.css`：本插件依赖的CSS
+- `jquery.min.js`：jquery支持库(经过压缩后的最小版本)
+- `jquery.popup.min.js`：本插件的源文件(经过压缩后的最小版本)
+- `jquery.popup.css`：本插件依赖的CSS
 
-  即将下面代码添加至HTML页面（例如`<head>`标签中）：
+ 即在`<head>`标签中添加：
+ 
+ ```html
+<script src="jquery.min.js"></script>
+<script src="jquery.popup.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.popup.css">
+```
 
-  ```
-	<script src="jquery.min.js"></script>
-	<script src="jquery.popup.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="jquery.popup.css">
-  ```
+###2. HTML代码
 
-###2. 定义弹窗元素，用CSS将其设置为不显示（可在弹窗内部定义关闭弹窗的按钮，其锚点为`#`）
+```html
+<style>#wnd {display:none;background:#FFF;width:100px;height:100px}</style>
+<a id="link" href="#wnd">ShowPopupWindow</a>
+<div id="wnd">
+	<a class="close" href="#">ClosePopupWindow</a>
+</div>
+```
 
- ```
-	<div id="wnd">
-		<a class="close" href="#">CloseWindow</a>
-	</div>
- ```
+###3. JavaScript代码
 
- ```
-	<style>#wnd {background:#FFF;width:100px;height:100px;display:none}</style>
- ```
+```html
+<script>
+	$("#link").popup({
+		top:"50px",
+		overlay:0.4,
+		focus:"#input",
+		close:".close"
+	});
+</script>
+```
 
-###3. 定义链接元素，锚点为弹窗元素的id，点此元素可打开弹窗
-
- ```
-	<a id="link" href="#wnd">PopupWindow</a>
- ```
-
-###4. 插入javascript代码如下
-
- ```
-	<script>
-		$("#link").popup({
-			top:"50px",
-			overlay:0.4,
-			focus:"#input",
-			close:".close"
-		});
-	</script>
- ```
-
-实际使用效果，可参考Demo。
+实际使用效果见Demo。
