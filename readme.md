@@ -1,9 +1,9 @@
 
-##简介
+## 简介
 
 jQuery.popup插件是一款简单易用的网页弹窗插件，是在jQuery.leanModal插件的基础上改进而来。
 
-##功能
+## 功能
 
 - 可在上下左右四个方向灵活设置弹窗位置
 
@@ -17,7 +17,7 @@ jQuery.popup插件是一款简单易用的网页弹窗插件，是在jQuery.lean
 
 - 窗口弹出后，可自动将焦点设置给指定元素
 
-##参数说明
+## 参数说明
 
 - top,bottom,left,right参数用于控制弹窗位置，可支持多种格式，和css中的属性一致，例如：`'100px'`,`'10%'`
 
@@ -41,9 +41,9 @@ jQuery.popup插件是一款简单易用的网页弹窗插件，是在jQuery.lean
 
 - overlay:覆盖层透明度（范围0~1，默认为0.1，数值越大颜色越深，背景越暗）
 
-##使用简介
+## 使用简介
 
-###1. 在HTML中包含以下文件：
+### 1. 在HTML中包含以下文件：
 
 - `jquery.min.js`：jquery支持库(经过压缩后的最小版本)
 - `jquery.popup.min.js`：本插件的源文件(经过压缩后的最小版本)
@@ -57,7 +57,7 @@ jQuery.popup插件是一款简单易用的网页弹窗插件，是在jQuery.lean
 <link rel="stylesheet" type="text/css" href="jquery.popup.css">
 ```
 
-###2. HTML代码
+### 2. HTML代码
 
 ```html
 <style>#wnd {display:none;background:#FFF;width:100px;height:100px}</style>
@@ -67,7 +67,7 @@ jQuery.popup插件是一款简单易用的网页弹窗插件，是在jQuery.lean
 </div>
 ```
 
-###3. JavaScript代码
+### 3. JavaScript代码
 
 ```html
 <script>
